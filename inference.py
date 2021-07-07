@@ -66,7 +66,7 @@ def inference(weight, network, dataset, embeddings):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='PyTorch ArcFace Training')
     parser.add_argument('--network', type=str, default='r2060', help='backbone network')
-    parser.add_argument('--weight', type=str, default='ms1mv3_arcface_r2060/backbone.pth')
+    parser.add_argument('--weight', type=str, default='models/ms1mv3_arcface_r2060/backbone.pth')
     parser.add_argument('--dataset', type=str, default=None)
     parser.add_argument("--embeddings", default="outputs/embeddings.pickle")
     args = parser.parse_args()
