@@ -51,7 +51,8 @@ def inference(weight, network, dataset, embeddings):
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         img = np.transpose(img, (2, 0, 1))
         img = torch.from_numpy(img).unsqueeze(0).float()
-        feat = net(img).numpy()
+        img = img.to(torch.device('cuda'))
+        feat = net(img).cpu().numpy()
 
         knownNames.append(name)
         knownEmbeddings.append(feat)
