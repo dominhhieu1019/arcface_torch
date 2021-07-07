@@ -60,7 +60,7 @@ def inference(weight, network, dataset, embeddings):
 
     # save to output
     data = {"embeddings": knownEmbeddings, "names": knownNames}
-    f = open(embeddings, "wb")
+    # f = open(embeddings, "wb")
     f.write(pickle.dumps(data))
     f.close()
 
