@@ -32,8 +32,9 @@ def inference(weight, network, dataset, embeddings):
     
     # Initialize the faces embedder
     net = get_model(network, fp16=False)
-    # net.load_state_dict(torch.load(weight))
-    net.load_state_dict(torch.load(weight, map_location=torch.device('cpu')))  # CPU usage    
+    # net.load_state_dict(torch.load(weight, map_location=torch.device('cpu')))  # CPU usage    
+    net.load_state_dict(torch.load(weight))
+    net.to(torch.device('cuda'))
     net.eval()
 
     # Initialize our lists of extracted facial embeddings and corresponding people names
