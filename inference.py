@@ -26,7 +26,7 @@ def inference(weight, network, dataset, embeddings):
 
     # Grab the paths to the input images in our dataset
     print("[INFO] quantifying faces...")
-    imagePaths = [os.path.join('../DB_AsianFace_face_mask/DB_AsianFace_face_mask', '_'.join(x.split('_')[1:-1]), x) for x in image_name]
+    imagePaths = [os.path.join('DB_AsianFace_face_mask/DB_AsianFace_face_mask', '_'.join(x.split('_')[1:-1]), x) for x in image_name]
     
     # Initialize the faces embedder
     net = get_model(network, fp16=False)
