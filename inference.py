@@ -19,6 +19,8 @@ def inference(weight, network, dataset, embeddings):
     if dataset is None:
         return
     
+    f = open(embeddings, "wb")
+    
     # if args.train:
     #     X, y, glasses, image_name, labels_dict = load_data('DB_AsianFace_face_mask/0_train.pkl')
     # else:
