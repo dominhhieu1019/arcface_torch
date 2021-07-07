@@ -5,6 +5,7 @@ model/*/*.pth
 # Ignore Mac DS_Store files
 .DS_Store
 **/.DS_Store
+DB_AsianFace_face_mask/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
