@@ -31,7 +31,7 @@ def inference(weight, network, dataset, embeddings):
     imagePaths = [os.path.join('DB_AsianFace_face_mask/DB_AsianFace_face_mask', '_'.join(x.split('_')[1:-1]), x) for x in image_name]
     
     # Initialize the faces embedder
-    net = get_model(network, fp16=False)
+    net = get_model(network, fp16=True)
     # net.load_state_dict(torch.load(weight, map_location=torch.device('cpu')))  # CPU usage    
     net.load_state_dict(torch.load(weight))
     net.to(torch.device('cuda'))
